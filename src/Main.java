@@ -5,7 +5,12 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         System.out.print("Please write name <USER>: ");
 
-        String us = scan.nextLine();
+        String us = null;
+        if (scan.hasNextLine()){
+            us = scan.nextLine();
+        }
+
         System.out.println("Hello " + us + "!");
+        scan.close();
     }
 }
